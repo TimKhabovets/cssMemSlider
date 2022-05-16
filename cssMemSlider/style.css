@@ -1,0 +1,81 @@
+html {
+    max-width: 99%;
+}
+body {
+    max-width: 99%;
+    margin: auto;
+    background: #1D1F2A;
+}
+.wrapper {
+    
+    overflow: hidden;
+    padding: 10px 25px 5px 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.text_indicators {
+    position: relative;
+    margin: 14px 0 0 0;
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+p {
+    color: #fff;
+}
+.carousel-item, .text-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 1s cubic-bezier(0, 0, 0.34, 0.47);
+    transition: opacity 1s cubic-bezier(0, 0, 0.34, 0.47);
+}
+.carousel-item img {
+    
+    height: 530px;
+    width: 100%;
+}
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    justify-content: flex-end;
+    bottom: 2%;
+    z-index: 10;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 5px 5px;
+}
+.carousel-label {
+    padding: 6px;
+}
+.carousel-bullet {
+    margin: 5px;
+    background-color: #aaaaaa;
+    cursor: pointer;
+    border: #aaaaaa solid;
+    border-radius: 100%;
+    padding: 7px; 
+}
+
+.carousel-label:hover .carousel-bullet{
+    background-color: #fff;
+    border: #fff solid;
+}
+
+@media screen and (max-width: 769px)  {
+    .carousel-item img {
+    
+        height: 400px;
+    }
+}
